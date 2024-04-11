@@ -46,20 +46,21 @@ class Elevador:
     def entra(self):
         if self.cap_elevador < 10:
             self.cap_elevador += 1
-            print("uma pessoa entrou")
+            print(f"temos {self.cap_elevador} pessoas")
         else:
             print("capacidade máxima")
     def sai(self):
         if self.cap_elevador > 0:
             self.cap_elevador -= 1
-            print("uma pessoa saiu")
+            print(f"uma pessoa saiu e agora temos {self.cap_elevador}")
         else:
             print("não tem ninguem para sair")
     def subir(self):
         if self.andar_atual != self.total_andares:
             self.andar_atual += 1
+            print(f'subimos para o andar{self.andar_atual}')
         else:
-            print("não da para subir")
+            print(f"não da para subir pois chegamos no {self.andar_atual}")
     def descer(self):
         if self.andar_atual == self.terreo:
             print("não da para descer pro subsolo")
@@ -68,6 +69,30 @@ class Elevador:
     def finalizar(self):
         print("saiu do programa")
 
-    
+elevador = Elevador(0,10,0,0,0)
+
+def menu():
+    escolha = ' '
+    while escolha != 5:
+        escolha = int(input("Escolha qual ação deseja fazer com o elevador:"))
+        print(""" Ações do MENU 
+              Digite 1 para entrar no elevador
+              Digite 2 para sair do elevador
+              Digite 3 para subir
+              Digite 4 para Descer
+              Digite 5 para sair do programa""")
+        if escolha == 1:
+            elevador.entra()
+        if escolha == 2:
+            elevador.sai()
+        if escolha == 3:
+            elevador.subir()
+        if escolha == 4:
+            elevador.descer()
+        if escolha == 5:
+            elevador.finalizar()
+
+menu()
+
 
 
