@@ -16,11 +16,7 @@ class pessoa:
     def imprimir(self):
         print(f'a pessoa se chama :{self._nome}, tem {self._idade} anos e {self._altura} m de altura')
 
-# pessoa1 = pessoa()
-# pessoa1.set_nome("pedro")
-# pessoa1.set_idade(18)
-# pessoa1.set_altura(1.70)
-# pessoa1.imprimir()
+
 
 #2
 def calcular_juros(valor_vista,valor_parcela,qnt_parcelas):
@@ -28,7 +24,7 @@ def calcular_juros(valor_vista,valor_parcela,qnt_parcelas):
     valor_juros = valor_total_parcelado - valor_vista
     print(f'o valor do juros é {valor_juros} e o valor total parcelado {valor_total_parcelado}')
 
-#calcular_juros(100,25,5)
+
 
 #3
 class Elevador:
@@ -69,7 +65,7 @@ class Elevador:
     def finalizar(self):
         print("saiu do programa")
 
-elevador = Elevador(0,10,0,0,0)
+
 
 def menu():
     escolha = ' '
@@ -92,7 +88,7 @@ def menu():
         if escolha == 5:
             elevador.finalizar()
 
-#menu()
+
 
 #4
 class Funcionario:
