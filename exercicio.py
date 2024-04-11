@@ -22,3 +22,12 @@ pessoa1.set_idade(18)
 pessoa1.set_altura(1.70)
 pessoa1.imprimir()
 
+#2
+def calcular_juros(valor_vista,valor_parcela,qnt_parcelas):
+    valor_total_parcelado = valor_parcela * qnt_parcelas
+    valor_juros = valor_total_parcelado - valor_vista
+    print(f'o valor do juros é {valor_juros} e o valor total parcelado {valor_total_parcelado}')
+
+calcular_juros(100,25,5)
+
+
