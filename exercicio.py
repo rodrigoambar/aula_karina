@@ -16,11 +16,11 @@ class pessoa:
     def imprimir(self):
         print(f'a pessoa se chama :{self._nome}, tem {self._idade} anos e {self._altura} m de altura')
 
-pessoa1 = pessoa()
-pessoa1.set_nome("pedro")
-pessoa1.set_idade(18)
-pessoa1.set_altura(1.70)
-pessoa1.imprimir()
+# pessoa1 = pessoa()
+# pessoa1.set_nome("pedro")
+# pessoa1.set_idade(18)
+# pessoa1.set_altura(1.70)
+# pessoa1.imprimir()
 
 #2
 def calcular_juros(valor_vista,valor_parcela,qnt_parcelas):
@@ -28,7 +28,7 @@ def calcular_juros(valor_vista,valor_parcela,qnt_parcelas):
     valor_juros = valor_total_parcelado - valor_vista
     print(f'o valor do juros é {valor_juros} e o valor total parcelado {valor_total_parcelado}')
 
-calcular_juros(100,25,5)
+#calcular_juros(100,25,5)
 
 #3
 class Elevador:
@@ -92,7 +92,33 @@ def menu():
         if escolha == 5:
             elevador.finalizar()
 
-menu()
+#menu()
+
+#4
+class Funcionario:
+    def __init__(self,nome,cpf,salario):
+        self.nome = nome
+        self.cpf = cpf
+        self.salario = salario
 
 
+class Gerente(Funcionario):
+    def __init__(self, nome, cpf, salario):
+        super().__init__(nome, cpf, salario)
+        self._senha = '1234'
+
+    def autentificar(self):
+        s = ''
+        while True:
+            s = input("Digite a senha do gerente:")
+            if s == self._senha:
+                print(f'Senha correta, Bem vindo {self.nome}')
+                break
+            else:
+                s = input("Senha negada tente novamente:")
+                if s == self._senha:
+                    print(f'Senha correta, Bem vindo {self.nome}')
+                    break
+g = Gerente('Pedro',50525101871,2000)
+g.autentificar()
 
