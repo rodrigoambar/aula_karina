@@ -30,4 +30,44 @@ def calcular_juros(valor_vista,valor_parcela,qnt_parcelas):
 
 calcular_juros(100,25,5)
 
+#3
+class Elevador:
+    def __init__(self,andar_atual, total_andares,cap_elevador,quant_pessoas, terreo):
+        self.andar_atual = andar_atual
+        self.total_andares = total_andares
+        self.cap_elevador = cap_elevador
+        self.quant_pessoas = quant_pessoas
+        self.terreo = terreo
+
+    def inicializa(self):
+        self.cap_elevador = 0
+        self.quant_pessoas = 0
+        self.terreo = 0
+    def entra(self):
+        if self.cap_elevador < 10:
+            self.cap_elevador += 1
+            print("uma pessoa entrou")
+        else:
+            print("capacidade máxima")
+    def sai(self):
+        if self.cap_elevador > 0:
+            self.cap_elevador -= 1
+            print("uma pessoa saiu")
+        else:
+            print("não tem ninguem para sair")
+    def subir(self):
+        if self.andar_atual != self.total_andares:
+            self.andar_atual += 1
+        else:
+            print("não da para subir")
+    def descer(self):
+        if self.andar_atual == self.terreo:
+            print("não da para descer pro subsolo")
+        else:
+            print(f"desceu")
+    def finalizar(self):
+        print("saiu do programa")
+
+    
+
 
