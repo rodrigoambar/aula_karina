@@ -119,6 +119,22 @@ class Gerente(Funcionario):
                 if s == self._senha:
                     print(f'Senha correta, Bem vindo {self.nome}')
                     break
-g = Gerente('Pedro',50525101871,2000)
-g.autentificar()
+
+#Exercício 1
+# pessoa1 = pessoa()
+# pessoa1.set_nome("pedro")
+# pessoa1.set_idade(18)
+# pessoa1.set_altura(1.70)
+# pessoa1.imprimir()
+
+#Exercício 2
+#calcular_juros(100,25,5)
+
+#Exercício 3
+elevador = Elevador(0,10,0,0,0)
+#menu()
+
+#Exercício 4
+#g = Gerente('Pedro',50525101871,2000)
+#g.autentificar()
 
